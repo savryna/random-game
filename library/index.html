@@ -55,12 +55,324 @@
         </div>
 
         <section class="about" id="about">
-            h2.about
+            <div class="wallpaper">
+                <h2 class="about__title">
+                    About
+                </h2>
+                <p class="about__desc">
+                    The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
+                </p>
+                <div class="about__images">
+                    <img src="./assets/img/about-img1.png" alt="imagine a girl">
+                    <img src="./assets/img/about-img2.png" alt="imagine statue">
+                    <img src="./assets/img/about-img3.png" alt="imagine bookshelves">
+                </div>
+                <ul class="carousel">
+                    <li class="carousel__item">
+                        <button class="carousel__item__circle carousel__item__circle-vers1">
+
+                        </button>
+                    </li>
+                    <li class="carousel__item">
+                        <button class="carousel__item__circle carousel__item__circle-vers2">
+
+                        </button>
+                    </li>
+                    <li class="carousel__item">
+                        <button class="carousel__item__circle carousel__item__circle-vers2">
+
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
-        <section class="favorites" id="favorites"></section>
-        <section class="coffee-shop" id="coffee-shop"></section>
-        <section class="contacts" id="contacts"></section>
+        <section class="favorites" id="favorites">
+
+            <div class="wallpaper">
+                <h2 class="favorites__title">
+                    Favorites
+                </h2>
+                <p class="favorites__desc">
+                    Pick favorites of season
+                </p>
+
+                <form action="#" class="favorites__form">
+                    <label class="favorites__label fav__winter">
+                        <input type="radio" name="season" class="favorites__input" value="Winter" checked>
+                        Winter
+                    </label>
+
+
+                    <label class="favorites__label fav__spring">
+                        <input type="radio" name="season" class="favorites__input" value="Spring">
+                        Spring
+                    </label>
+                    <!-- !!!!!!!!!!!!ДОБАВИТЬ СТИЛИ ПЕРЕКЛЮЧАТЕЛЯМ!!!!!! -->
+
+                    <label class="favorites__label fav__summer">
+                        <input type="radio" name="season" class="favorites__input" value="Summer">
+                        Summer
+                    </label>
+
+
+                    <label class="favorites__label fav_autumn">
+                        <input type="radio" name="season" class="favorites__input" value="Autumn">
+                        Autumn
+                    </label>
+                </form>
+
+                <ul class="favorites__list favorites__list_winter">
+                    <li class="favorites__list__item">
+                        <h3 class="staff-picks">
+                            Staff Picks
+                        </h3>
+                        <h2 class="favorites__list__item-title">
+                            <span class="book-name">The Book Eaters</span><br>By Sunyi Dean
+                        </h2>
+                        <p class="favorites__list__item-desc">
+                            An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous
+                            mind-eater son from tradition and certain death. Complete with dysfunctional family values,
+                            light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.
+                        </p>
+                        <img src="./assets/img/book-1.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
+                        <button class="button-book">Buy</button>
+                    </li>
+
+                    <li class="favorites__list__item">
+                        <h3 class="staff-picks">
+                            Staff Picks
+                        </h3>
+                        <h2 class="favorites__list__item-title">
+                            <span class="book-name">Cackle</span><br>By Rachel Harrison
+                        </h2>
+                        <p class="favorites__list__item-desc">
+                            Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no
+                            further than here - where a woman recovering from a breakup moves to a quaint town in
+                            upstate New York and befriends a beautiful witch.
+                        </p>
+                        <img src="./assets/img/book-2.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
+                        <button class="button-book">Buy</button>
+                    </li>
+
+                    <li class="favorites__list__item">
+                        <h3 class="staff-picks">
+                            Staff Picks
+                        </h3>
+                        <h2 class="favorites__list__item-title">
+                            <span class="book-name">Dante: Poet of the Secular World</span><br> By Erich Auerbach
+
+                        </h2>
+                        <p class="favorites__list__item-desc">
+                            Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and
+                            philosophy in general, arguing for Dante's uniqueness as one who raised the individual and
+                            his drama of soul into something of divine significance—an inspired introduction to Dante's
+                            main themes.
+                        </p>
+                        <img src="./assets/img/book-3.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
+                        <button class="button-book">Buy</button>
+                    </li>
+
+                    <li class="favorites__list__item">
+                        <h3 class="staff-picks">
+                            Staff Picks
+                        </h3>
+                        <h2 class="favorites__list__item-title">
+                            <span class="book-name">The Last Queen</span><br>By Clive Irving
+
+                        </h2>
+                        <p class="favorites__list__item-desc">
+                            A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the
+                            Windsors have evolved and thrived as the modern world has changed around them.
+                        </p>
+                        <img src="./assets/img/book-4.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
+                        <button class="button-book_own" disabled>Own</button>
+                    </li>
+
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="coffee-shop" id="coffee-shop">
+            <div class="wallpaper">
+                <h2 class="coffee-shop__title">
+                    Coffee Shop
+                </h2>
+                <p class="coffee-shop__desc">
+                    In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
+                    friendly conversation.
+                    You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also
+                    you can try desserts from bakery.
+                </p>
+                <div class="coffee-shop__menu">
+                    <div class="coffee-shop__menu__left">
+                        <h3 class="drinks__title">
+                            Coffee &amp; Tea
+                        </h3>
+                        <ul class="coffee-shop__menu__left__list">
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    Cold Brew Coffee
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $3
+                                </h4>
+
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    French Press Pot
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $5
+                                </h4>
+                            </li class="coffee-shop__menu__left__list__item">
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    Espresso
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $2
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    Cappuccino
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $4
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    Hot tea
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $2
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__left__list__item">
+                                <h4 class="coffee-shop__menu__left__list__item__title">
+                                    Cold tea
+                                </h4>
+                                <h4 class="coffee-shop__menu__left__price">
+                                    $2
+                                </h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="coffee-shop__menu__right">
+                        <h3 class="desserts__title">
+                            Desserts &amp; Cakes
+                        </h3>
+                        <ul class="coffee-shop__menu__right__list">
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Forest Gateau
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $16
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Blue Moon
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $16
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Truffle Cake
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $15
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Chocolate Cake
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $18
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Poet’s Dream Cake
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $16
+                                </h4>
+                            </li>
+                            <li class="coffee-shop__menu__right__list__item">
+                                <h4 class="coffee-shop__menu__right___list__item__title">
+                                    Pineapple Cake
+                                </h4>
+                                <h4 class="coffee-shop__menu__right__price">
+                                    $14
+                                </h4>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="contacts" id="contacts">
+            <div class="wallpaper">
+                <h2 class="contacts__title">
+                    Our Contacts
+                </h2>
+                <!-- LIST ONE   LIST ONE    LIST ONE    LIST ONE   LIST ONE   -->
+                <ul class="contacts__list-tel">
+                    <li class="contacts__list-tel__item">
+                        <h3 class="contacts__list-tel__item__title">
+                            For All Library inquiries:
+                        </h3>
+                    </li>
+                    <li class="contacts__list-tel__item">
+                        <span class="contacts__list-tel__item__tel-number">
+                            <a href="" class="contacts__list-tel__item__link">Please call (617) 730-2370</a>
+                        </span>
+                    </li>
+
+                    <li class="contacts__list-tel__item">
+                        <span class="contacts__list-tel__item__tel-number">
+                            <a href="" class="contacts__list-tel__item__link">For TTY service, please call (617)
+                                730-2370</a>
+                        </span>
+                    </li>
+                    <li class="contacts__list-tel__item">
+                        <span class="contacts__list-tel__item__tel-number">
+                            <a href="" class="contacts__list-tel__item__link" target="_blank">Putterham Library: (617)
+                                730-2385</a>
+                        </span>
+                    </li>
+
+                    <!-- LIST TWO    LIST TWO    LIST TWO     LIST TWO -->
+                </ul>
+                <ul class="contacts__list-senior">
+                    <li class="contacts__list-senior__item">
+                        <h3 class="contacts__list-senior__item__title">
+                            Senior Staff
+                        </h3>
+                    </li>
+                    <li class="contacts__list-tel__item">
+                        <span class="contacts__list-senior__item__address">
+                            <a href="" class="contacts__list-senior__item__link">Library Director: <b>Amanda
+                                    Hirst</b></a>
+                        </span>
+                    </li>
+                </ul>
+                <a class="contacts__map" href="https://www.google.com/maps/dir//53.931521,27.646065/@53.9314507,27.5761168,12z?entry=ttu" target="_blank">
+                    <img src="./assets/img/map.png" alt="google map" class="contacts__map-img">
+                </a>
+            </div>
+        </section>
         <section class="library-card" id="library-card"></section>
     </main>
     <footer class="footer">
@@ -69,3 +381,6 @@
 </body>
 
 </html>
+
+
+<button class="button_dots button_one"></button>
