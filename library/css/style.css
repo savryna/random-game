@@ -354,20 +354,19 @@ h3 {
 
 
 .favorites__input {
-  accent-color: #000;
   margin-right: 20px;
   padding: 5px;
   cursor: pointer;
 }
 
 
-.fav__winter {
+/* .fav__winter {
   font-family: 'Inter';
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
 
-}
+} */
 
 
 .favorites__list {
@@ -459,6 +458,24 @@ h3 {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+
+/* radiobutton */
+
+.favorites__input {
+  accent-color:black;
+  }
+    
+  
+  .favorites__input:checked+.favorites__label{
+      color: #000;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  }
+
+/* radiobutton */
 
 
 .button-book {
@@ -904,7 +921,7 @@ h3 {
 
 /* Footer style start */
 .footer {
-  width: 1440px;
+  width: 100%;
   height: 250px;
   margin: 0 auto;
   background-color: #0C0C0E;
@@ -986,3 +1003,15 @@ h3 {
   margin-right: 306px;
 }
 /* Footer style end */
+
+
+/* Скрытые блоки */
+
+
+.favorites__list_summer,
+.favorites__list_spring,
+.favorites__list_autumn {
+  display: none;
+}
+
+
