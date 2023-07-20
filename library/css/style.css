@@ -998,6 +998,7 @@ input {
   line-height: normal;
   letter-spacing: 1px;
   transition: .3s;
+  cursor: pointer;
 }
 
 .library-card__form-submit:hover {
@@ -1030,6 +1031,7 @@ input {
 
 .button-sign,
 .button-log {
+  cursor: pointer;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
   padding: 8px 0;
@@ -1043,6 +1045,7 @@ input {
   line-height: normal;
   letter-spacing: 1px;
   transition: .3s;
+  
 }
 
 .button-log {
@@ -1054,6 +1057,7 @@ input {
   border-radius: 2px;
   border: 1px solid #BB945F;
   background: #BB945F;
+  cursor: pointer;
 }
 
 
