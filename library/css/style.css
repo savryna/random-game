@@ -191,7 +191,7 @@ input {
   width: 100%;
   position: relative;
   height: 600px;
-  margin-top: -1px;
+  margin-top: -3px;
   background-color: #0C0C0E;
   margin-bottom: 20px;
   background-image: url(../assets/img/welcome.png);
@@ -652,7 +652,6 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
 }
 
@@ -718,7 +717,6 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  /* 200% */
   letter-spacing: 2px;
   text-transform: capitalize;
 }
