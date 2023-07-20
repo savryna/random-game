@@ -46,14 +46,16 @@
     </header>
     <!-- Main start -->
     <main class="main">
-        <div class="wallpaper-full">
-            <section class="welcome">
-                <img src="./assets/img/welcome.png" alt="library imagine" class="welcome-img">
+
+        <section class="welcome">
+            <div class="wallpaper-full">
+
                 <h2 class="welcome__title">
                     <span class="span-welcome">Welcome</span><br> to the Brooklyn<br> Library
                 </h2>
-            </section>
-        </div>
+            </div>
+        </section>
+
 
         <section class="about" id="about">
             <div class="wallpaper">
@@ -99,26 +101,29 @@
                     Pick favorites of season
                 </p>
 
-                <form action="#" class="favorites__form">
-                    <input id="winter" type="radio" name="season" class="favorites__input" value="Winter" checked>
+                <div class="favorites__form">
+
                     <label for="winter" class="favorites__label fav__winter">
-                        Winter
+                        <input id="winter" type="radio" name="season" class="favorites__input" value="Winter" checked>
+                        <span class="fav-season-span">Winter</span>
                     </label>
 
-                    <input id="spring" type="radio" name="season" class="favorites__input" value="Spring">
                     <label for="spring" class="favorites__label fav__spring">
-                        Spring
-                    </label>
-                    <input id="summer" type="radio" name="season" class="favorites__input" value="Summer">
-                    <label for="summer" class="favorites__label fav__summer">
-                        Summer
+                        <input id="spring" type="radio" name="season" class="favorites__input" value="Spring">
+                        <span class="fav-season-span">Spring</span>
                     </label>
 
-                    <input id="autumn" type="radio" name="season" class="favorites__input" value="Autumn">
-                    <label for="autumn" class="favorites__label fav_autumn">
-                        Autumn
+                    <label for="summer" class="favorites__label fav__summer">
+                        <input id="summer" type="radio" name="season" class="favorites__input" value="Summer">
+                        <span class="fav-season-span">Summer</span>
                     </label>
-                </form>
+
+                    <label for="autumn" class="favorites__label fav_autumn">
+                        <input id="autumn" type="radio" name="season" class="favorites__input" value="Autumn">
+                        <span class="fav-season-span">Autumn</span>
+                    </label>
+
+                </div>
 
                 <ul class="favorites__list favorites__list_winter">
                     <li class="favorites__list__item">
@@ -261,7 +266,7 @@
 
                 </ul>
 
-                <!-- SPRING  SPRING   SPRING  SPRING   SPRING   SPRING  SPRING  SPRING  SPRING  SPRING  SPRING-->
+
                 <!-- SUMMER     SUMMER  SUMMER   SUMMER  SUMMER  SUMMER     SUMMER  SUMMER      SUMMER-->
 
 
@@ -337,7 +342,7 @@
                     </li>
 
                 </ul>
-                <!-- SUMMER     SUMMER  SUMMER   SUMMER  SUMMER  SUMMER     SUMMER  SUMMER      SUMMER-->
+
                 <!-- AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN-->
 
 
@@ -365,10 +370,12 @@
                         </h3>
                         <h2 class="favorites__list__item-title">
                             <span class="book-name">The Great Fire
-                                </span><br>By Lou Ureneck
+                            </span><br>By Lou Ureneck
                         </h2>
                         <p class="favorites__list__item-desc">
-                            The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide
+                            The harrowing story of an ordinary American and a principled Naval officer who, horrified by
+                            the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million
+                            refugees from the Armenian Genocide
                         </p>
                         <img src="./assets/img/book-aut-2.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
                         <button class="button-book">Buy</button>
@@ -380,11 +387,13 @@
                         </h3>
                         <h2 class="favorites__list__item-title">
                             <span class="book-name">Rickey: The Life and Legend
-                                </span><br>By Howard Bryant
+                            </span><br>By Howard Bryant
 
                         </h2>
                         <p class="favorites__list__item-desc">
-                            With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?
+                            With the fall rolling around, one can't help but think of baseball's postseason coming up!
+                            And what better way to prepare for it than reading the biography of one of the game's
+                            all-time greatest performers, the Man of Steal, Rickey Henderson?
                         </p>
                         <img src="./assets/img/book-aut-3.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
                         <button class="button-book">Buy</button>
@@ -396,18 +405,19 @@
                         </h3>
                         <h2 class="favorites__list__item-title">
                             <span class="book-name">Slug: And Other Stories
-                                </span><br>By Megan Milks
+                            </span><br>By Megan Milks
 
                         </h2>
                         <p class="favorites__list__item-desc">
-                            Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.
+                            Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father
+                            and child experience the shared trauma of giving birth to gods from their wounds.
                         </p>
                         <img src="./assets/img/book-aut-4.png" alt="The Book Eaters By Sunyi Dean" class="book-cover">
                         <button class="button-book_own" disabled>Own</button>
                     </li>
 
                 </ul>
-                <!-- AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN AUTUMN-->
+
             </div>
         </section>
 
@@ -552,21 +562,30 @@
                     </li>
                     <li class="contacts__list-tel__item">
                         <span class="contacts__list-tel__item__tel-number">
-                            <a href="tel:(617)-730-2370" class="contacts__list-tel__item__link">Please call (617)
-                                730-2370</a>
+                            <a href="tel:(617)-730-2370" class="contacts-link-1 contacts__list-tel__item__link">Please
+                                call (617)
+                                730-2370
+                                <img class="contacts-img img-tel-1" src="./assets/svg/telephone-svgrepo-com.svg"
+                                    alt="icon telephone"></a>
                         </span>
                     </li>
 
                     <li class="contacts__list-tel__item">
                         <span class="contacts__list-tel__item__tel-number">
-                            <a href="tel:(617)-730-2370" class="contacts__list-tel__item__link">For TTY service, please
-                                call (617) 730-2370</a>
+                            <a href="tel:(617)-730-2370" class="contacts-link-2 contacts__list-tel__item__link">For TTY
+                                service, please
+                                call (617) 730-2370
+                                <img class="contacts-img img-tel-2" src="./assets/svg/telephone-svgrepo-com.svg"
+                                    alt="icon telephone"></a>
                         </span>
                     </li>
                     <li class="contacts__list-tel__item">
                         <span class="contacts__list-tel__item__tel-number">
-                            <a href="tel:(617)-730-2385" class="contacts__list-tel__item__link"
-                                target="_blank">Putterham Library: (617) 730-2385</a>
+                            <a href="tel:(617)-730-2385" class="contacts-link-3 contacts__list-tel__item__link"
+                                target="_blank">Putterham Library: (617) 730-2385
+                                <img class="contacts-img img-tel-3" src="./assets/svg/telephone-svgrepo-com.svg"
+                                    alt="icon telephone">
+                            </a>
                         </span>
                     </li>
 
@@ -580,15 +599,19 @@
                     <li class="contacts__list-tel__item">
                         <span class="contacts__list-senior__item__address">
                             <a href="mailto:AmandaHirst@gmail.com" class="contacts__list-senior__item__link">Library
-                                Director: <b>Amanda Hirst</b></a>
+                                Director: <b>Amanda Hirst</b>
+                                <img class="contacts-img img-mail" src="./assets/svg/mail-svgrepo-com.svg" alt=""></a>
                         </span>
                     </li>
                 </ul>
+
                 <a class="contacts__map"
                     href="https://www.google.com/maps/dir//53.931521,27.646065/@53.9314507,27.5761168,12z?entry=ttu"
                     target="_blank">
                     <img src="./assets/img/map.png" alt="google map" class="contacts__map-img">
                 </a>
+
+
             </div>
         </section>
         <section class="library-card" id="library-card">
@@ -601,7 +624,7 @@
                         <h3 class="library-card__left__title">
                             Find your Library card
                         </h3>
-                        <form action="#!" class="library-card__form">
+                        <form action="#library-card" class="library-card__form">
                             <div class="library-card__form__inside">
                                 <h4 class="library-card__form__title">
                                     Brooklyn Public Library
@@ -642,7 +665,8 @@
             <div class="footer__top">
                 <div class="footer__top__left">
                     <p class="footer__top__left__decs">
-                        <a href="https://www.google.com/maps/dir//53.931521,27.646065/@53.9314507,27.5761168,12z?entry=ttu"
+                        <a class="address-link"
+                            href="https://www.google.com/maps/dir//53.931521,27.646065/@53.9314507,27.5761168,12z?entry=ttu"
                             target="_blank">
                             286 Cadman Plaza, New York,<br>
                             NY 11238, United States
@@ -652,19 +676,19 @@
                     <ul class="footer__top__left__list">
                         <li class="footer__top__left__list__icon">
                             <a href="https://twitter.com/rollingscopes" target="_blank">
-                                <img src="./assets/svg/twitter.svg" alt="twitter pic">
+                                <img class="social-img" src="./assets/svg/twitter.svg" alt="twitter pic">
                             </a>
 
                         </li>
                         <li class="footer__top__left__list__icon">
                             <a href="https://rs.school/" target="_blank">
-                                <img src="./assets/svg/instagram.svg" alt="instagram">
+                                <img class="social-img" src="./assets/svg/instagram.svg" alt="instagram">
                             </a>
 
                         </li>
                         <li class="footer__top__left__list__icon">
                             <a href="https://www.facebook.com/rsschoolEN/?locale=ru_RU" target="_blank">
-                                <img src="./assets/svg/facebook.svg" alt="facebook">
+                                <img class="social-img" src="./assets/svg/facebook.svg" alt="facebook">
                             </a>
 
                         </li>
@@ -693,12 +717,13 @@
                     </li>
                     <li class="footer__down__list__item">
                         <span class="footer__down__rss">
-                            <a href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes School</a>
+                            <a class="rss-link" href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes
+                                School</a>
                         </span>
                     </li>
                     <li class="footer__down__list__item">
                         <span class="footer__down__github">
-                            <a href="https://github.com/assavr" class="footer__down__github__link">
+                            <a class="github-name" href="https://github.com/assavr" class="footer__down__github__link">
                                 Anastasia Savrukhina
                             </a>
                         </span>
