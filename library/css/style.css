@@ -195,6 +195,7 @@ input {
   background-color: #0C0C0E;
   margin-bottom: 20px;
   background-image: url(../assets/img/welcome.png);
+  background-position: center;
   background-size: cover;
 }
 
@@ -1071,7 +1072,7 @@ input {
 }
 
 .footer__top {
-  padding-top: 20px;
+  padding-top: 17px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
