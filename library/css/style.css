@@ -103,7 +103,7 @@ input {
 
 /* Header style start */
 .header {
-  width: 100%;
+  width: 1440px;
   height: 90px;
   margin: 0 auto;
   color: #FFF;
@@ -188,7 +188,8 @@ input {
 /* Main style start */
 
 .welcome {
-  width: 100%;
+  width: 1440px;
+  margin: 0 auto;
   position: relative;
   height: 603px;
   margin-top: -3px;
@@ -333,6 +334,7 @@ input {
   background-color: #0C0C0E;
 }
 
+
 .favorites__desc {
   margin-bottom: 33px;
   color: #000;
@@ -347,15 +349,6 @@ input {
   display: flex;
   margin-bottom: 29px;
 }
-
-.fav-block-input {
-  height: 44px;
-  margin-right: 90px;
-  padding: 10px 0px;
-  cursor: pointer;
-}
-
-
 
 .favorites__label {
   margin-right: 89px;
@@ -1065,7 +1058,7 @@ input {
 
 /* Footer style start */
 .footer {
-  width: 100%;
+  width: 1440px;
   height: 250px;
   margin: 0 auto;
   background-color: #0C0C0E;
