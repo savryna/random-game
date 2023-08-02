@@ -351,7 +351,8 @@ input {
 }
 
 .favorites__label {
-  margin-right: 89px;
+  width: 122px;
+  margin-right: 74px;
   padding: 10px 0px;
   font-family: 'Inter';
   font-size: 20px;
@@ -359,6 +360,17 @@ input {
   font-weight: 400;
   cursor: pointer;
 
+}
+.fav__spring {
+  width: 117px;
+  margin-right: 72px;
+}
+
+.fav__summer {
+  margin-right: 78px;
+}
+#summer {
+  margin-right: 15px;
 }
 
 .favorites__label:last-child {
@@ -970,7 +982,6 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  /* 166.667% */
   letter-spacing: 0.6px;
 }
 
