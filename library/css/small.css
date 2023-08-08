@@ -164,9 +164,7 @@
     visibility: visible;
   }
 
-  .header.open .header__user-profile {
-    display: none;
-  }
+ 
 
   .button__user-profile-menu {
     display: none;
