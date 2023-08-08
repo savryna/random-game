@@ -59,6 +59,10 @@ body {
   padding:
 }
 
+.wrapper__welcome__title {
+  max-width: 1440px;
+  margin:0 auto;
+}
 .body-wrapper {
   width: 100%;
 }
@@ -209,7 +213,7 @@ input {
 
 .welcome__title {
   position: absolute;
-  top: 220px;
+  top: 223px;
   z-index: 1;
   width: 600px;
   height: 220px;
