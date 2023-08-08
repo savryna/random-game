@@ -7,18 +7,31 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"  href="./css/small.css">
+    <script src="./js/index.js"></script>
+    <script defer src="./js/index-2.js"></script>
     <title>Brooklyn Public Library</title>
+    
 </head>
 
 <body>
+    <div class="body-wrapper">
     <header class="header">
-        <div class="wallpaper">
+        <div class="wrapper">
             <div class="header__top">
                 <h1 class="header__title">
                     Brooklyn Public Library
                 </h1>
-                <nav class="header__nav">
-                    <ul class="header__list">
+                <nav class="header__nav" id="header__nav">
+                    <div class="header__nav__burger">
+                        <button class="button__user-profile-menu">
+                            <img class="button__user-profile-menu" src="./assets/svg/icon_profile.svg" alt="icon user">
+                     </button>
+                    <button class="button__burger" id="button__burger-close">
+                        <img src="./assets/svg/burger-2.svg" alt="icon close" class="button__img-close">
+                    </button>
+                    </div>
+                    <ul class="header__list" id="header__list">
                         <li class="header__list__item">
                             <a href="#about" class="header__nav-link">About</a>
                         </li>
@@ -36,9 +49,13 @@
                         </li>
                     </ul>
                 </nav>
+
                 <div class="header__user-profile">
                     <button class="button__user-profile">
-                        <img class="button__user-profile-img" src="./assets/svg/icon_profile.svg" alt="">
+                        <img class="button__user-profile-img" src="./assets/svg/icon_profile.svg" alt="icon user">
+                    </button>
+                    <button class="button__burger-open" id="button__burger-open">
+                        <img src="./assets/svg/burger.svg" alt="icon open" class="button__img-1">
                     </button>
                 </div>
             </div>
@@ -47,30 +64,43 @@
     <!-- Main start -->
     <main class="main">
 
+        <div class="wrapper-ful">
         <section class="welcome">
-            <div class="wallpaper-full">
+            
 
                 <h3 class="welcome__title">
                     <span class="span-welcome">Welcome</span><br> to the Brooklyn<br> Library
                 </h3>
-            </div>
+        
         </section>
+    </div>
 
 
         <section class="about" id="about">
-            <div class="wallpaper">
-                <h2 class="about__title">
+            <div class="wrapper">
+                <h2 class="about__title title">
                     About
                 </h2>
                 <p class="about__desc">
                     The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
                 </p>
                 <div class="about__images">
-                    <img src="./assets/img/about-img1.png" alt="imagine a girl">
-                    <img src="./assets/img/about-img2.png" alt="imagine statue">
-                    <img src="./assets/img/about-img3.png" alt="imagine bookshelves">
+                    <button class="about__button">
+                        <img class="about__button__arrow about__button__arrow-2" src="./assets/svg/arrow-2.svg" alt="arrow">
+                    </button>
+                    <img class="about__img about__img-1" src="./assets/img/about-img1.png" alt="imagine a girl">
+                    <img class="about__img about__img-2" src="./assets/img/about-img2.png" alt="imagine statue">
+                    <img class="about__img about__img-3" src="./assets/img/about-img3.png" alt="imagine bookshelves">
+                    <button class="about__button">
+                        <img class="about__button__arrow about__button__arrow-1" src="./assets/svg/arrow-1.svg" alt="arrow">
+                    </button>
                 </div>
                 <ul class="carousel">
+                    <li class="carousel__item">
+                        <button class="carousel__item__circle carousel__item__circle-vers2 carousel-off-1">
+
+                        </button>
+                    </li>
                     <li class="carousel__item">
                         <button class="carousel__item__circle carousel__item__circle-vers1">
 
@@ -86,6 +116,12 @@
 
                         </button>
                     </li>
+                    <li class="carousel__item">
+                        <button class="carousel__item__circle carousel__item__circle-vers2 carousel-off">
+
+                        </button>
+                    </li>
+                    
                 </ul>
             </div>
 
@@ -93,8 +129,8 @@
 
         <section class="favorites" id="favorites">
 
-            <div class="wallpaper">
-                <h2 class="favorites__title">
+            <div class="wrapper">
+                <h2 class="favorites__title title">
                     Favorites
                 </h2>
                 <p class="favorites__desc">
@@ -422,14 +458,13 @@
         </section>
 
         <section class="coffee-shop" id="coffee-shop">
-            <div class="wallpaper">
-                <h2 class="coffee-shop__title">
+            <div class="wrapper">
+                <h2 class="coffee-shop__title title">
                     Coffee Shop
                 </h2>
                 <p class="coffee-shop__desc">
                     In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
-                    friendly conversation.
-                    You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also
+                    friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also
                     you can try desserts from bakery.
                 </p>
                 <div class="coffee-shop__menu">
@@ -550,8 +585,8 @@
         </section>
 
         <section class="contacts" id="contacts">
-            <div class="wallpaper">
-                <h2 class="contacts__title">
+            <div class="wrapper">
+                <h2 class="contacts__title title">
                     Our Contacts
                 </h2>
                 <ul class="contacts__list-tel">
@@ -615,8 +650,8 @@
             </div>
         </section>
         <section class="library-card" id="library-card">
-            <div class="wallpaper">
-                <h2 class="library-card__title">
+            <div class="wrapper">
+                <h2 class="library-card__title title">
                     Digital Library Cards
                 </h2>
                 <div class="library-card__container">
@@ -661,7 +696,7 @@
     </main>
 
     <footer class="footer">
-        <div class="wallpaper">
+        <div class="wrapper">
             <div class="footer__top">
                 <div class="footer__top__left">
                     <p class="footer__top__left__decs">
@@ -724,7 +759,7 @@
                     <li class="footer__down__list__item">
                         <span class="footer__down__github">
                             <a class="footer__down__github__link github-name" href="https://github.com/assavr">
-                                Anastasia Savrukhina
+                                Anastasia
                             </a>
                         </span>
                     </li>
@@ -733,7 +768,8 @@
 
         </div>
     </footer>
-    <script src="./js/index.js"></script>
+    
+   </div>
 </body>
 
 </html>
