@@ -111,13 +111,13 @@
     margin: 0;
     width: 336px;
     height: 570px;
-    background-color: #000;
+    background-color: #0C0C0E;
     transition: transform .5s, visibility .5s;
   }
 
   .header__list {
     display: block;
-    margin-top: 40px;
+    margin-top: 29px;
     text-align: center;
   }
 
@@ -144,7 +144,7 @@
   .header__nav__burger {
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin-right: 25px;
     margin-top: 18px;
 
   }
@@ -160,7 +160,7 @@
   }
 
   .header.open .header__nav {
-    transform: translateX(-346px);
+    transform: translateX(-336px);
     visibility: visible;
   }
 
@@ -168,7 +168,7 @@
 
   .button__user-profile-menu {
     display: none;
-    margin-right: 20px;
+    margin-right: 22px;
   }
 
   .header.open .button__user-profile-menu {
@@ -282,7 +282,7 @@
 /* Coffee style start */
   .coffee-shop__desc {
     margin: 0 auto;
-    width: 101%;
+    width: 100%;
     margin-bottom: 40px
   }
 
