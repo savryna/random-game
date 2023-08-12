@@ -20,8 +20,8 @@
   }
 
   .about__img {
-    margin-right: 46px;
-    margin-left: 46px;
+    margin-right: 52px;
+    margin-left: 52px;
   }
   .carousel-off,
   .carousel-off-1 {
@@ -37,6 +37,7 @@
   }
   .about__button {
     display: block;
+    padding: 15px;
   }
 
   /* TEST */
@@ -235,8 +236,8 @@
   }
 
   .about__img {
-    margin-right: 46px;
-    margin-left: 46px;
+    margin-right: 52px;
+    margin-left: 52px;
   }
   .carousel-off,
   .carousel-off-1 {
@@ -252,6 +253,7 @@
   }
   .about__button {
     display: block;
+    padding: 15px;
   }
 
   .about__button:hover {
@@ -271,6 +273,8 @@
   .about__button__arrow {
     display: inline-block;
     margin-top: 47px;
+    width: 6px;
+    height: 10px;
   }
 
   .favorites__list__item:nth-child(1),
