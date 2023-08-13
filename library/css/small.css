@@ -57,6 +57,8 @@
   .about__button__arrow {
     display: inline-block;
     margin-top: 47px;
+    width: 6px;
+    height: 10px;
   }
 
   .favorites__list__item:nth-child(1),
@@ -214,7 +216,9 @@
   }
 
   /* ABOUT */
-
+  .about {
+    margin-bottom: 54px;
+  }
   .title::before {
     content: '';
     position: absolute;
@@ -262,7 +266,7 @@
   
 /* Favorites style start */
   .favorites__list__item {
-    margin-left: 9%;
+    margin-left: 9.7%;
     margin-bottom: 40px;
   }
 
@@ -287,7 +291,7 @@
   .coffee-shop__desc {
     margin: 0 auto;
     width: 100%;
-    margin-bottom: 40px
+    margin-bottom: 38px
   }
 
   .coffee-shop__menu {
@@ -308,13 +312,13 @@
     margin-left: auto;
     margin-right: auto;
     top: 581px;
-    left: 20px;
+    left: 36px;
     text-align: center;
 
   }
 
   .contacts {
-    margin-bottom: 574px;
+    margin-bottom: 576px;
   }
 /* Contacts style end */
 
