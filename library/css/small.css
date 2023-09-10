@@ -1,6 +1,13 @@
 @media screen and (max-width: 1405px) {
+  .block__favorites {
+    height: 2300px;
+  }
+  
   .wrapper {
     max-width: calc(100% - 40px);
+  }
+  .slider__block {
+    width: 450px;
   }
   .header__top {
     justify-content: center;
@@ -14,18 +21,16 @@
     margin-bottom: 20px;
   }
 
-  .about__img-2,
-  .about__img-3 {
-    display: none;
+  .about__button__arrow-2 {
+    margin-right: 50px;
   }
 
-  .about__img {
-    margin-right: 52px;
-    margin-left: 52px;
+  .about__button__arrow-1 {
+    margin-left: 50px;
   }
-  .carousel-off,
-  .carousel-off-1 {
-    display: block;
+ 
+  .carousel__none {
+    display: inherit;
   }
 
   .carousel-off-1 {
@@ -57,7 +62,7 @@
   .about__button__arrow {
     display: inline-block;
     margin-top: 47px;
-    width: 6px;
+    width: 10px;
     height: 10px;
   }
 
@@ -74,11 +79,23 @@
  }
 }
 
-
+@media screen and (max-width: 1262px) {
+  .favorites {
+    margin-bottom: 172px;
+}
+}
 /* MEDIA 1024px     MEDIA 1024px      MEDIA 1024px       MEDIA 1024px      MEDIA 1024px */
 
 
 @media screen and (max-width: 1024px) {
+  .form__window-login,
+  .form__window-register {
+    bottom: auto;
+    top: 2%
+  }
+  .header__profile {
+    margin-left: -141px;
+  }
 
   .wrapper {
     max-width: calc(100% - 40px);
@@ -95,7 +112,9 @@
     position: relative;
     overflow: hidden;
   }
-
+  .slider__block {
+    width: 450px;
+  }
   /* Header style start */
   .header {
     max-width: 100%;
@@ -110,12 +129,12 @@
     position: absolute;
     right: -336px;
     top: 0px;
-    z-index: 2;
     margin: 0;
     width: 336px;
     height: 570px;
     background-color: #0C0C0E;
     transition: transform .5s, visibility .5s;
+    z-index: 20;
   }
 
   .header__list {
@@ -154,7 +173,7 @@
 
   .header.open .button__img-close {
     visibility: visible;
-    z-index: 2;
+    z-index: 30;
 
   }
 
@@ -172,6 +191,7 @@
   .button__user-profile-menu {
     display: none;
     margin-right: 22px;
+    z-index: 21;
   }
 
   .header.open .button__user-profile-menu {
@@ -187,6 +207,14 @@
   .button__user-profile {
     margin-right: 40px;
     position: relative;
+    z-index: 10;
+  }
+  .button__burger-open{
+    z-index: 10;
+  }
+  .button__burger {
+    position: relative;
+    z-index: 30;
   }
 
   .button__burger-open:hover,
@@ -234,15 +262,9 @@
     margin-bottom: 20px;
   }
 
-  .about__img-2,
-  .about__img-3 {
-    display: none;
-  }
+  
 
-  .about__img {
-    margin-right: 52px;
-    margin-left: 52px;
-  }
+  
   .carousel-off,
   .carousel-off-1 {
     display: block;
@@ -277,7 +299,7 @@
   .about__button__arrow {
     display: inline-block;
     margin-top: 47px;
-    width: 6px;
+    width: 10px;
     height: 10px;
   }
 
@@ -414,5 +436,8 @@
 } 
 }
 
+/* Мусор важный */
 
-
+.z-index {
+  z-index: 20;
+}
