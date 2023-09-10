@@ -52,8 +52,13 @@
                     </nav>
 
                     <div class="header__user-profile">
-                        <button class="button__user-profile">
+                        <button class="button__user-profile ">
                             <img class="button__user-profile-img" src="./assets/svg/icon_profile.svg" alt="icon user">
+                            
+                        </button>
+                        <!-- ICON AFTER REGISTRATION START -->
+                        <button class="icon-user__after none">
+                            <span class="icon-span">JD</span>
                         </button>
                         <button class="button__burger-open" id="button__burger-open">
                             <img src="./assets/svg/burger.svg" alt="icon open" class="button__img-1">
@@ -84,14 +89,14 @@
                 
                 <div class="wrapper__header__profile__modal">
                     <div class="white none"></div>
-                    <div class="header__profile none">
+                    <div class="header__profile__after none">
                         <h3 class="header__profile-title">
                             Profile
                         </h3>
-                        <button class="profile__button-text profile__login">
+                        <button class="profile__button-text profile__login btn__my-profile">
                             My profile
                         </button>
-                        <button class="profile__button-text profile__register">
+                        <button class="profile__button-text profile__register btn-log-out">
                             Log Out
                         </button>
                     </div>
@@ -101,7 +106,7 @@
                     <!--             JAVASCRIPT        -->
                     <div class="wrapper__login">
                     <div class="gray none"></div>
-                    <div  class="form__window-login none">
+                    <div class="form__window-login none">
                         <div class="window-login">
                             <div class="window-login__top">
                                 <h3 class="window-login__title">
@@ -137,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                    <!--             JAVASCRIPT        -->
+                    <!--           регистрация  JAVASCRIPT        -->
                     <div class="wrapper__register">
                     <div class="gray none"></div>
                     <div  class="form__window-register none">
@@ -154,21 +159,21 @@
                                     </svg>
                                 </button>
                             </div>
-                            <label class="window-register__label-first-name">
+                            <label class="window-register__label-first-name" >
                                 First name
-                                <input type="text" class="window-register__input window-register__input-email">
+                                <input type="text" class="window-register__input window-register__input-fname" name="firstName">
                             </label>
                             <label class="window-register__label-last-name">
                                 Last name
-                                <input type="text" class="window-register__input window-register__input-email">
+                                <input type="text" class="window-register__input window-register__input-lname" name="lastName">
                             </label>
                             <label class="window-register__label-email">
                                 E-mail
-                                <input type="email" class="window-register__input window-register__input-email">
+                                <input type="email" class="window-register__input window-register__input-email" name="email">
                             </label>
                             <label class="window-register__label-psw">
                                 Password
-                                <input type="password" class="window-register__input window-register__input-psw">
+                                <input type="password" class="window-register__input window-register__input-psw" name="password">
                             </label>
                             <button class="window-register__button">
                                 Sign Up
@@ -185,13 +190,13 @@
                     </div>
                 </div>
                     <!--             JAVASCRIPT        -->
-                    <div class="wrapper__window__my-profile">
+                    <div class="wrapper__window__my-profile ">
                     <div class="gray none"></div>
-                    <div class="window__my-profile">
+                    <div class="window__my-profile none">
                         
                         <div class="window__my-profile__left">
                             <div class="window__my-profile__avatar">
-
+                                <span class="icon-span">JD</span>
                             </div>
                             <div class="window__my-profile__name-block">
                                 <h3 class="window__my-profile__name">
@@ -731,14 +736,14 @@
                                 </p>
                                 <img src="./assets/img/book-aut-4.png" alt="The Book Eaters By Sunyi Dean"
                                     class="book-cover">
-                                <button class="button-book_own" disabled>Own</button>
+                                <button class="button-book">Buy</button>
                             </li>
     
                         </ul>
     <!-- JAVASCRIPT START -->
                         <div class="wrapper__window__buy-card">
                             <div class="gray none"></div>
-                        <div class="window__buy-card">
+                        <div class="window__buy-card none">
                             
                             <div class="window__buy-card__top">
                                 <h3 class="window__buy-card__top__title">
@@ -1010,7 +1015,7 @@
                             <h3 class="library-card__left__title">
                                 Find your Library card
                             </h3>
-                            <form action="#library-card" class="library-card__form">
+                            <form action="" class="library-card__form">
                                 <div class="library-card__form__inside">
                                     <h4 class="library-card__form__title">
                                         Brooklyn Public Library
@@ -1045,10 +1050,10 @@
                         </div>
                     </div>
 
-                    <!-- CHECK THE CARD -->
-                    <div class="block__check-the-card">
+                    <!-- JS CHECK THE CARD -->
+                    <div class="block__check-the-card none">
 
-                        <div class="library-card__container">
+                        <div class="library-card__container-2">
                             <div class="library-card__left">
                                 <h3 class="library-card__left__title">
                                     Your Library card
@@ -1125,7 +1130,7 @@
                                     With a digital library card you get free access to the Library’s wide array of
                                     digital resources including e-books, databases, educational resources, and more.
                                 </p>
-                                <button class="button-sign">
+                                <button class="button-sign-after">
                                     Profile
                                 </button>
 
@@ -1133,7 +1138,7 @@
                         </div>
                     </div>
 
-                    <!-- CHECK THE CARD -->
+                    <!--JS end CHECK THE CARD -->
 
                 </div>
             </section>
