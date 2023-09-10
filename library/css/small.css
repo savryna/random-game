@@ -93,7 +93,18 @@
     bottom: auto;
     top: 2%
   }
-  .header__profile {
+
+  .library-card__container-2{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .icon-user__after {
+    margin-right: 40px;
+  }
+
+  .header__profile,
+  .header__profile__after {
     margin-left: -141px;
   }
 
@@ -193,6 +204,7 @@
     margin-right: 22px;
     z-index: 21;
   }
+  
 
   .header.open .button__user-profile-menu {
     display: block;
