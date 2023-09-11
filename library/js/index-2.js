@@ -286,41 +286,40 @@ LogOut.addEventListener('click', () => {
   location.reload();
 })
 
-// Забираю буковки у имени фамилии 
-const first = localStorage.firstName;
-const last = localStorage.lastName;
-let letters = first.toUpperCase().slice(0,1) + last.toUpperCase().slice(0, 1)
 
-// Делаю случайное число
-// // Math.ceil(Math.random() * 1000000000)
-// let cardNumber;
-// function randomNum() {
-//   cardNumber = Math.ceil(Math.random() * 1000000000);
-// }
-// Не сделала :) 
+
+
 
 // Имя держателя карты 
-const readerNameAfter = document.querySelector('.input__check-the-card');
-const test = `${first + ' ' + last}`
-readerNameAfter.setAttribute('placeholder', test)
+// const readerNameAfter = document.querySelector('.input__check-the-card');
+// const test = `${first + ' ' + last}`
+// readerNameAfter.setAttribute('placeholder', test)
 
-profileFromCard.addEventListener('click', () => {
-windowMyProfile.classList.remove('none');
-gray.classList.remove('none');
-})
+// profileFromCard.addEventListener('click', () => {
+// windowMyProfile.classList.remove('none');
+// gray.classList.remove('none');
+// })
 
 // покупка книжечек я уже схожу с ума
-const buyBookBtn = document.querySelectorAll('.button-book')
+// const buyBookBtn = document.querySelectorAll('.button-book')
 
-const windowBuyBook = document.querySelector('.window__buy-card')
-for (item of buyBookBtn) {
-item.addEventListener('click', () => {
-  windowBuyBook.classList.remove('none');
-  gray.classList.remove('none')
-})
-}
+// const windowBuyBook = document.querySelector('.window__buy-card')
+// for (item of buyBookBtn) {
+// item.addEventListener('click', () => {
+//   windowBuyBook.classList.remove('none');
+//   gray.classList.remove('none')
+// })
+// }
+
+// Забираю буковки у имени фамилии 
+// let first = (localStorage.firstName).toUpperCase;
+
+// let last = (localStorage.lastName).toUpperCase;
+
+// let letters = first.slice(0,1) + last.slice(0, 1);
 
 function isRegister() {
+ 
   if (localStorage.register === 'true') {
     userButtonAfter.classList.remove('none');
     userButton.classList.add('none')
@@ -348,7 +347,10 @@ function isRegister() {
   }
 }
 
+
+
 isRegister();
+
 change();
 
 
