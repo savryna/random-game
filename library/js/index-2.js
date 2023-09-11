@@ -336,11 +336,11 @@ function isRegister() {
       white.classList.add('none')
       windowBuyBook.classList.add('none')
     })
-    for (item of letterName) {
-    item.innerHTML = letters;
-    }
+    // for (item of letterName) {
+    // item.innerHTML = letters;
+    // }
 
-    userName.innerHTML = `${first + ' ' + last}`;
+    // userName.innerHTML = `${first + ' ' + last}`;
     
     libraryAfter.classList.remove('none');
     libraryBefore.classList.add('none');
@@ -354,5 +354,3 @@ isRegister();
 change();
 
 
-
-// alert(localStorage.FirstName)
