@@ -255,8 +255,10 @@ const userButtonAfter = document.querySelector('.icon-user__after')
 const myProfileFromIcon = document.querySelector('.btn__my-profile');
 const LogOut = document.querySelector('.btn-log-out');
 const windowMyProfile = document.querySelector('.window__my-profile')
-const letterName = document.querySelectorAll('.icon-span')
+const letterName = document.querySelector('.icon-span')
+const letterName2 = document.querySelector('.icon-span-2')
 const userName = document.querySelector('.window__my-profile__name')
+const readerNameAfter = document.querySelector('.input__check-the-card');
 
 function change() {
   for (let i = 0; i < inputsRegister.length; i++) {
@@ -284,6 +286,7 @@ myProfileFromIcon.addEventListener('click', () => {
 LogOut.addEventListener('click', () => {
   localStorage.setItem('register', 'false')
   location.reload();
+  
 })
 
 
@@ -336,6 +339,12 @@ function isRegister() {
       white.classList.add('none')
       windowBuyBook.classList.add('none')
     })
+    let fullName = localStorage.firstName + ' ' + localStorage.lastName;
+    let l = localStorage.firstName.toUpperCase().slice(0,1) + localStorage.lastName.toUpperCase().slice(0,1);
+    letterName.innerHTML = l;
+    letterName2.innerHTML = l;
+    userName.innerHTML = fullName;
+    readerNameAfter.setAttribute('placeholder', fullName)
     // for (item of letterName) {
     // item.innerHTML = letters;
     // }
