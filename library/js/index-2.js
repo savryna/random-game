@@ -352,5 +352,5 @@ function isRegister() {
 isRegister();
 
 change();
-
+alert()
 
