@@ -96,6 +96,8 @@ const videoSrc = [
   'https://youtu.be/FUdteCBRX9c?si=kzdx7Gg8kxZBrF8j',
   'https://youtu.be/tW0iCBZCM7I?si=5MNHI0zbSkKR3dYe',
   'https://www.youtube.com/watch?v=yzufzjg5Qho',
+  'https://www.youtube.com/watch?v=AaAvxqfhdiI',
+  'https://www.youtube.com/watch?v=DyeJ24fn20Q',
 
 ]
 let songsIndex = 0;
@@ -117,7 +119,7 @@ function currentSong(song) {
     songName.href = `${videoSrc[rand]}`;
     blockPlayer.setAttribute('data-shadow', `${rand}`);
   } else {
-  author.innerHTML = songsAuthor[songsIndex];
+  author.innerHTML = song;
   songName.innerHTML = songsName[songsIndex];
   audio.src = `./assets/audio/${song}.mp3`;
   album.src = `./assets/img/${song}.jpg`;
@@ -196,24 +198,26 @@ const songBtntoo = document.querySelectorAll('.song__item__author');
 
 function chooseSong(e) {
   if(e.target.classList.contains(`zero`)) {
-    currentSong(songsAuthor[0])
-    playAudio();
+    songsIndex = 0;
+    rand = 0;
   } else if(e.target.classList.contains(`one`)) {
-    currentSong(songsAuthor[1]);
-    playAudio()
+    songsIndex = 1;
+    rand = 1;
   } else if(e.target.classList.contains(`two`)) {
-    currentSong(songsAuthor[2]);
-    playAudio()
+    songsIndex = 2;
+    rand = 2;
   } else if(e.target.classList.contains(`three`)) {
-    currentSong(songsAuthor[3]);
-    playAudio()
+    songsIndex = 3;
+    rand = 3;
   } else if(e.target.classList.contains('four')) {
-    currentSong(songsAuthor[4]);
-    playAudio()
+    songsIndex = 4;
+    rand = 4;
   } else if(e.target.classList.contains(`five`)) {
-    currentSong(songsAuthor[5]);
-    playAudio()
+    songsIndex = 5;
+    rand = 5;
   }
+  currentSong(songsAuthor[songsIndex])
+  playAudio();
 }
 songBtn.forEach( e => {
   e.addEventListener('click', chooseSong);
@@ -224,8 +228,21 @@ songBtntoo.forEach( e => {
 
 function modalControl() {
   modal.classList.toggle('none')
-
 }
+
 openBtn.addEventListener('click', modalControl)
 closeBtn.addEventListener('click', modalControl)
 wrapperModal.addEventListener('click', modalControl)
+
+// function chooseSong(e) {
+//   for (let i = 0; i < songBtn.length; i++)
+//    return console.log(e.target.songBtn[i])
+  
+// }
+
+// songBtn.forEach( e => {
+//   e.addEventListener('click', chooseSong);
+// })
+// songBtntoo.forEach( e => {
+//   e.addEventListener('click', chooseSong);
+// })

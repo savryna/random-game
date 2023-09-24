@@ -275,8 +275,8 @@ ul {
   color: #aaa;
 }
 
-.rss {
-  width: 100px;
+.rss img{
+  width: 50px;
 }
 .none {
   display: none;
