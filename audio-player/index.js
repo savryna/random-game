@@ -130,14 +130,6 @@ function currentSong(song) {
 
 currentSong(songsAuthor[songsIndex])
 
-// random song
-// 
-// function randomSong(song) {
-
-// }
-
-
-// randomSong(songsAuthor[rand])
 
 function nextSong() {
   songsIndex++;
@@ -147,11 +139,6 @@ function nextSong() {
   }
   currentSong(songsAuthor[songsIndex])
   playAudio();
-  //  if (audio.classList.contains('random')) {
-   
-    // randomSong(songsAuthor[rand]);
-    // playAudio();
-  // }
   
 }
 
@@ -197,3 +184,34 @@ if(audio.classList.contains('repeat')) {
 })
 
 
+// playlist 
+
+const modal = document.querySelector('.modal__playlist');
+const openBtn = document.querySelector('.menu');
+const closeBtn = document.querySelector('.btn__close');
+const wrapperModal = document.querySelector('.wrapper__modal')
+
+const songBtn = document.querySelectorAll('.song__item');
+
+function chooseSong(e) {
+  if(e.target.classList.contains(`zero`)) {
+    currentSong(songsAuthor[0])
+  } else if(e.target.classList.contains(`one`)) {
+    currentSong(songsAuthor[1])
+  } else if(e.target.classList.contains(`two`)) {
+    currentSong(songsAuthor[2])
+  } else if(e.target.classList.contains(`three`)) {
+    currentSong(songsAuthor[3])
+  }
+}
+songBtn.forEach( e => {
+  e.addEventListener('click', chooseSong);
+})
+
+function modalControl() {
+  modal.classList.toggle('none')
+
+}
+openBtn.addEventListener('click', modalControl)
+closeBtn.addEventListener('click', modalControl)
+wrapperModal.addEventListener('click', modalControl)
