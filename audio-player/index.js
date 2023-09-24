@@ -89,8 +89,8 @@ progressTime()
 
 
 // prev next song
-const songsAuthor = ['Joji', 'Shortparis', `Jahman'sLove`, 'Творожное озеро']; //array with authors
-const songsName = ['Like you do', 'Страшно', 'Одна любовь', 'Секрет'] //array with songs
+const songsAuthor = ['Joji', 'Shortparis', `Jahman'sLove`, 'Творожное озеро', 'Альянс', 'Сова']; //array with authors
+const songsName = ['Like you do', 'Страшно', 'Одна любовь', 'Секрет', 'На заре', 'Первый снег'] //array with songs
 const videoSrc = [
   'https://www.youtube.com/watch?v=mS-d5PEomYs',
   'https://youtu.be/FUdteCBRX9c?si=kzdx7Gg8kxZBrF8j',
@@ -192,6 +192,7 @@ const closeBtn = document.querySelector('.btn__close');
 const wrapperModal = document.querySelector('.wrapper__modal')
 
 const songBtn = document.querySelectorAll('.song__item');
+const songBtntoo = document.querySelectorAll('.song__item__author');
 
 function chooseSong(e) {
   if(e.target.classList.contains(`zero`)) {
@@ -206,9 +207,18 @@ function chooseSong(e) {
   } else if(e.target.classList.contains(`three`)) {
     currentSong(songsAuthor[3]);
     playAudio()
+  } else if(e.target.classList.contains('four')) {
+    currentSong(songsAuthor[4]);
+    playAudio()
+  } else if(e.target.classList.contains(`five`)) {
+    currentSong(songsAuthor[5]);
+    playAudio()
   }
 }
 songBtn.forEach( e => {
+  e.addEventListener('click', chooseSong);
+})
+songBtntoo.forEach( e => {
   e.addEventListener('click', chooseSong);
 })
 

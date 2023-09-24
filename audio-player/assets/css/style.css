@@ -88,6 +88,13 @@ ul {
 [data-shadow= "3"] {
   box-shadow: 0px 0px 100px rgb(107 106 165);
 }
+[data-shadow= "4"] {
+  box-shadow: 0px 0px 100px rgb(138, 138, 146);
+}
+[data-shadow= "5"] {
+  box-shadow: 0px 0px 100px rgb(83, 116, 106);
+}
+
 
 .container-audio-img {
   position: absolute;
