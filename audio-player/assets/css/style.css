@@ -200,7 +200,6 @@ ul {
   position: absolute;
   align-items: center;
   justify-content: center;
-  /* display: none; */
   
 }
 .wrapper__modal {
@@ -257,6 +256,22 @@ ul {
  fill: #fff;
 }
 
+
+.info {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  color: #aaa;
+}
+
+.rss {
+  width: 100px;
+}
 .none {
   display: none;
+  opacity: 0;
 }

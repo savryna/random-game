@@ -17,7 +17,7 @@ const pathRepeat = document.querySelector('.path-repeat')
 const btnRandom = document.querySelector('.btn-random')
 const pathRandom = document.querySelector('.path-random')
 
-
+audio.volume = 0.4;
 // 
 // play pause audio
 function playAudio() {
@@ -196,12 +196,16 @@ const songBtn = document.querySelectorAll('.song__item');
 function chooseSong(e) {
   if(e.target.classList.contains(`zero`)) {
     currentSong(songsAuthor[0])
+    playAudio();
   } else if(e.target.classList.contains(`one`)) {
-    currentSong(songsAuthor[1])
+    currentSong(songsAuthor[1]);
+    playAudio()
   } else if(e.target.classList.contains(`two`)) {
-    currentSong(songsAuthor[2])
+    currentSong(songsAuthor[2]);
+    playAudio()
   } else if(e.target.classList.contains(`three`)) {
-    currentSong(songsAuthor[3])
+    currentSong(songsAuthor[3]);
+    playAudio()
   }
 }
 songBtn.forEach( e => {
