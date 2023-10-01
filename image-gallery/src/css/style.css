@@ -24,6 +24,10 @@ button {
   border: none;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .wrapper {
   max-width: 1440px;
@@ -196,4 +200,31 @@ input::-webkit-search-results-decoration {
 .block-img:hover .img {
   filter: blur(2px);
   transition: 1s;
+}
+
+.info {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 50px;
+
+}
+
+.rss-logo img{
+  width: 100px;
+  transform: scale(1);
+ transition-duration: .8s;
+}
+.rss-logo:hover img{
+ transform: scale(1.2);
+ transition-duration: .8s;
+}
+.github{
+ transform: scale(1);
+ transition-duration: .8s;
+}
+.github:hover {
+ color: white;
+ transform: scale(1.2);
+ transition-duration: .8s;
 }
