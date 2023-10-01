@@ -38,7 +38,7 @@ button {
   margin-bottom: 50px;
 }
 
-.header__promo{
+.header__promo {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -183,16 +183,17 @@ input::-webkit-search-results-decoration {
   z-index: 20;
 }
 
-
-.btn-download{
+.btn-download {
   opacity: 0;
   transition: opacity 1s;
 }
 
-.block-img:hover .btn-download{
+.block-img:hover .btn-download {
   opacity: 1;
-  transition: opacity 1s
+  transition: opacity 1s;
 }
 
-
-
+.block-img:hover .img {
+  filter: blur(2px);
+  transition: 1s;
+}
