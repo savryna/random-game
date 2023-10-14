@@ -8,6 +8,7 @@ const buttonVolume = document.querySelector('.btn-sound-volume');
 const buttonCloseScore = document.querySelector('.close-score');
 const canvas = document.querySelector('.canvas');
 const catcher = document.querySelector('.catcher');
+const scoreList = document.querySelectorAll('li');
 const catcherCenter =
   parseInt(window.getComputedStyle(canvas).getPropertyValue('width')) / 2 -
   parseInt(window.getComputedStyle(catcher).getPropertyValue('width')) / 2;
@@ -38,7 +39,7 @@ let score = 0;
 
 // const arr = new Array(10);
 let scoreStatistic = JSON.parse(localStorage.getItem('assavr-scoreStatistic')) ?? [];
-
+updateScoreTable(scoreList, scoreStatistic);
 
 
 
@@ -227,7 +228,7 @@ function addResultToScore(result) {
   updateScoreTable(scoreList, scoreStatistic);
 }
 
-const scoreList = document.querySelectorAll('li');
+
 
 
 // localStorage.setItem('assavr-scoreStatistic', JSON.stringify(scoreStatistic));
