@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/normalize.css" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="icon" href="./src/img/leaf.svg" type="image/svg+xml" />
+    <title>Happy Fall</title>
+  </head>
+  <body>
+    <div class="header">
+      <button class="btn-sound-volume"></button>
+      <h1 class="title">
+        H<span
+          ><img
+            `
+            class="title-pumpkin"
+            src="./src/img/pumpkin.svg"
+            alt="" /></span
+        >ppy Fall!
+      </h1>
+    </div>
+    <div class="canvas">
+      <div class="hp__block">
+        <img
+          class="hp"
+          src="./src/img/hp-transformed.png"
+          alt="health points"
+        />
+        <img
+          class="hp"
+          src="./src/img/hp-transformed.png"
+          alt="health points"
+        />
+        <img
+          class="hp"
+          src="./src/img/hp-transformed.png"
+          alt="health points"
+        />
+      </div>
+      <div class="div-score">
+        <span class="span-score"
+          >Score: <span class="score-points">0</span>
+        </span>
+      </div>
+      <div class="falling-objects"></div>
+      <div class="dead-line"></div>
+      <div class="catcher">
+        <img class="catcher__img" src="./src/img/fox.svg" alt="" />
+      </div>
+      <div class="house">
+        <img src="./src/img/house.svg" alt="" class="house__img" />
+      </div>
+      <div class="tree">
+        <img src="./src/img/firs.svg" alt="tree pic" />
+      </div>
+      <dialog class="modal-hello open" open>
+        <div class="modal-hello__content">
+          <h2>
+            H<span
+              ><img
+                class="title-pumpkin"
+                src="./src/img/pumpkin.svg"
+                alt="" /></span
+            >ppy Fall!
+          </h2>
+          <p class="modal-hello__game-description">
+            Привет!<br />
+            В этой игре тебе предстоит собрать осенний букет<span
+              ><img
+                class="span__img-leaf"
+                src="./src/img/leaf.svg"
+                alt="leaf"
+                width="20px"
+            /></span>
+            и не промокнуть<span
+              ><img
+                class="span__img-drop"
+                src="./src/img/drop.svg"
+                alt="drop"
+                width="20px" /></span
+            >! Будь аккуратен, болеть не круто!
+          </p>
+          <button class="button__play-game game-button">Начать</button>
+
+
+          <button class="top-score top-score-top-right ">
+            <span class="text-btn-top-score">Score?</span>
+          </button>
+
+
+        </div>
+      </dialog>
+      <dialog class="modal-game-over">
+        <div class="modal-game-over__content">
+          <h2>
+            G<span
+              ><img
+                class="title-pumpkin"
+                src="./src/img/game-over.png"
+                alt="" /></span
+            >me Over!
+          </h2>
+          <p class="game-over__score">
+            Твой счёт: <span class="score-points-finally">0</span>
+          </p>
+          <p class="game-over__description">
+            На улице было слишком холодно и дождливо, ты заболел! Выздоравливай
+            и возвращайся снова!
+          </p>
+          <button class="restart game-button">Выздороветь</button>
+          <button class="top-score top-score-top-right score-game-over">
+            <span class="text-btn-top-score">Score?</span>
+          </button>
+        </div>
+      </dialog>
+      <dialog class="dialog-score">
+        <div class="dialog-score-content">
+          <div class="score-header">
+            <h2 class="title-statistics-score">Score Statistics</h2>
+            <button class="close-score" title="Close"><img src="./src/img/cross.png" alt="close button"></button>
+          </div>
+
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </dialog>
+    </div>
+    <footer class="info">
+      <a href="https://github.com/assavr" class="github" target="_blank"
+        >assavr</a
+      >
+      <p class="year">2023</p>
+      <a href="https://rs.school/js-stage0/" class="rss-logo" target="_blank">
+        <img src="./src/img/rs_school.png" alt="rsschool">
+      </a>
+    </footer>
+    <script src="./src/js/index.js" type="module"></script>
+  </body>
+</html>
