@@ -82,14 +82,12 @@
                 width="20px" /></span
             >! Будь аккуратен, болеть не круто!
           </p>
+          <button class="button-rules">Хочу больше правил</button>
           <button class="button__play-game game-button">Начать</button>
 
-
-          <button class="top-score top-score-top-right ">
+          <button class="top-score top-score-top-right">
             <span class="text-btn-top-score">Score?</span>
           </button>
-
-
         </div>
       </dialog>
       <dialog class="modal-game-over">
@@ -119,7 +117,9 @@
         <div class="dialog-score-content">
           <div class="score-header">
             <h2 class="title-statistics-score">Score Statistics</h2>
-            <button class="close-score" title="Close"><img src="./src/img/cross.png" alt="close button"></button>
+            <button class="close-score" title="Close">
+              <img src="./src/img/cross.png" alt="close button" />
+            </button>
           </div>
 
           <ol>
@@ -136,6 +136,40 @@
           </ol>
         </div>
       </dialog>
+      <dialog class="dialog-rules">
+        <div class="dialog-rules-content">
+          <div class="dialog-rules-top">
+            <button class="btn-arrow-back">
+              <img src="./src/img/arrow.png" alt="arrow" class="arrow-back-img"/>
+            </button>
+            <h2>
+              H<span
+                ><img
+                  class="title-pumpkin"
+                  src="./src/img/pumpkin.svg"
+                  alt="" /></span
+              >ppy Fall!
+            </h2>
+          </div>
+          <ol class="dialog-rules-list">
+            <li class="dialog-rules-list-item">
+              <span>Первое правило клуба – не упоминать о Бойцовском клубе.</span>
+            </li>
+            <li class="dialog-rules-list-item">
+              <span>Если листочек падает на землю - ты теряешь жизнь.</span>
+            </li>
+            <li class="dialog-rules-list-item">
+              <span>Если попадёшь под дождь - теряешь жизнь.</span>
+            </li>
+            <li class="dialog-rules-list-item">
+              <span>Игра не закончится, пока не потеряешь все жизни.</span>
+            </li>
+          </ol>
+          <p class="dialog-rules-ps">
+            P.S. Таблица результатов доступна из меню старта и меню проигрыша.
+          </p>
+        </div>
+      </dialog>
     </div>
     <footer class="info">
       <a href="https://github.com/assavr" class="github" target="_blank"
@@ -143,7 +177,7 @@
       >
       <p class="year">2023</p>
       <a href="https://rs.school/js-stage0/" class="rss-logo" target="_blank">
-        <img src="./src/img/rs_school.png" alt="rsschool">
+        <img src="./src/img/rs_school.png" alt="rsschool" />
       </a>
     </footer>
     <script src="./src/js/index.js" type="module"></script>

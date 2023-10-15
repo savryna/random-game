@@ -20,7 +20,7 @@ button {
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 button:focus {
@@ -176,11 +176,6 @@ dialog {
     transform 0.5s ease-out;
 }
 
-.modal-hello[opened] {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .modal-hello__content {
   overflow: hidden;
   position: relative;
@@ -196,15 +191,24 @@ dialog {
 }
 
 .modal-hello__game-description {
-  margin: 30px 0;
+  margin: 30px 0 10px;
   font-size: 20px;
   line-height: 35px;
 }
+
 
 .span__img-leaf,
 .span__img-drop {
   margin: 0 5px;
   margin-bottom: -5px;
+}
+
+.button-rules {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .button__play-game {
@@ -229,13 +233,8 @@ dialog {
   opacity: 0;
   transform: translateY(-20px);
   transition:
-    opacity 0.3s ease-out,
-    transform 0.3s ease-out;
-}
-
-.open {
-  opacity: 1;
-  transform: translateY(0);
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
 }
 
 .modal-game-over__content {
@@ -269,7 +268,7 @@ dialog {
   border: 2px solid rgb(207 112 22);
   border-radius: 20px;
   background-color: rgba(216 123 86 / 50%);
-  margin-top: 40px;
+  margin-top: 20px;
   color: inherit;
   transform: scale(1);
   transition-duration: 0.5s;
@@ -357,9 +356,74 @@ dialog {
 
 .top-score-top-right .text-btn-top-score {
   left: -15px;
-  top: 70px;
+  top: 60px;
   transform: rotate(312deg);
 }
+
+.dialog-rules {
+  position: relative;
+  z-index: 100;
+  margin-top: -110px;
+  padding: 150px 100px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+
+  /* dialog */
+  border: 1px solid #ccc;
+  transform-origin: center center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.dialog-rules-content {
+  overflow: hidden;
+  position: relative;
+  background-color: #e5d8be;
+  border: 5px solid #cf7016;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 90px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+.dialog-rules-top {
+  display: flex;
+  align-items: center;
+}
+
+.dialog-rules-top .arrow-back-img {
+  width: 30px;
+  height: 15px;
+  transition: 2s;
+}
+
+.dialog-rules-top h2 {
+  margin: 0 auto;
+}
+
+.btn-arrow-back:hover .arrow-back-img {
+  opacity: 0.5;
+  transform: scale(1.1);
+  transition: 2s;
+}
+
+.lol-img {
+  width: 25px;
+}
+
+.dialog-rules-list,
+.dialog-rules-ps{
+  font-size: 16px;
+  text-align: left;
+}
+
 
 .info {
   display: flex;
@@ -374,9 +438,11 @@ dialog {
   transition-duration: 0.8s;
 }
 
-
-
-
+.rss-logo:hover img {
+  width: 100px;
+  opacity: 0.7;
+  transition-duration: 0.8s;
+}
 
 .github {
   transform: scale(1);
@@ -388,3 +454,10 @@ dialog {
   color: #c2745a;
   transition: 0.8s;
 }
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

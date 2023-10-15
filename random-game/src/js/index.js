@@ -1,33 +1,38 @@
 import { controlAudio, playAudio } from './audio.js';
 import { getRandomNumber } from './helper.js';
-// import { moveCatcherLeft, moveCatcherRight,  } from './control_move.js';
+import { openDialog, closeDialog } from './control-dialogs.js';
 
 const btnRestart = document.querySelector('.restart');
-const buttonPlay = document.querySelector('.button__play-game');
-const buttonVolume = document.querySelector('.btn-sound-volume');
 const buttonCloseScore = document.querySelector('.close-score');
+const buttonPlay = document.querySelector('.button__play-game');
+const buttonPlayAlso = buttonPlay.cloneNode(true);
+const buttonOpenRules = document.querySelector('.button-rules');
+const buttonGoBack = document.querySelector('.btn-arrow-back');
+const buttonVolume = document.querySelector('.btn-sound-volume');
 const canvas = document.querySelector('.canvas');
 const catcher = document.querySelector('.catcher');
-const scoreList = document.querySelectorAll('li');
-const catcherCenter =
-  parseInt(window.getComputedStyle(canvas).getPropertyValue('width')) / 2 -
-  parseInt(window.getComputedStyle(catcher).getPropertyValue('width')) / 2;
 const catcherBottom = parseInt(
   window.getComputedStyle(catcher).getPropertyValue('bottom'),
 );
+const catcherCenter =
+  parseInt(window.getComputedStyle(canvas).getPropertyValue('width')) / 2 -
+  parseInt(window.getComputedStyle(catcher).getPropertyValue('width')) / 2;
 const dialogGameOver = document.querySelector('.modal-game-over');
+const dialogRules = document.querySelector('.dialog-rules');
+const dialogRulesInside = document.querySelector('.dialog-rules-content');
 const dialogHello = document.querySelector('.modal-hello');
 const dialogScore = document.querySelector('.dialog-score');
-const openScoreList = document.querySelectorAll('.top-score')
+const fallingObjects = document.querySelector('.falling-objects');
+const gameHeight = parseInt(
+  window.getComputedStyle(canvas).getPropertyValue('height'),
+);
 const gameWidth =
   parseInt(window.getComputedStyle(canvas).getPropertyValue('width')) -
   parseInt(window.getComputedStyle(canvas).getPropertyValue('border-width')) *
     3;
-const gameHeight = parseInt(
-  window.getComputedStyle(canvas).getPropertyValue('height'),
-);
 const hpImages = document.querySelectorAll('.hp');
-const fallingObjects = document.querySelector('.falling-objects');
+const openScoreList = document.querySelectorAll('.top-score');
+const scoreList = document.querySelectorAll('li');
 const scorePoint = document.querySelector('.score-points');
 const scorePointFinally = document.querySelector('.score-points-finally');
 
@@ -37,11 +42,36 @@ let catcherLeft = parseInt(
 let hp = 3;
 let score = 0;
 
-// const arr = new Array(10);
-let scoreStatistic = JSON.parse(localStorage.getItem('assavr-scoreStatistic')) ?? [];
+// localStorage
+let scoreStatistic =
+  JSON.parse(localStorage.getItem('assavr-scoreStatistic')) ?? [];
 updateScoreTable(scoreList, scoreStatistic);
 
+// add a button in the rules dialog
+buttonPlayAlso.innerText = 'Точно начать';
+dialogRulesInside.append(buttonPlayAlso);
 
+// localStorage
+function sortArray(array) {
+  return array.sort(function (a, b) {
+    return b - a;
+  });
+}
+
+function updateScoreTable(arrayHtml, arrayStore) {
+  for (let i = 0; i < arrayStore.length; i++) {
+    arrayHtml[i].innerText = `${arrayStore[i]}`;
+  }
+}
+
+function addResultToScore(result) {
+  console.log('assavr', result);
+  scoreStatistic.push(result);
+  sortArray(scoreStatistic);
+  scoreStatistic = scoreStatistic.slice(0, 10);
+  localStorage.setItem('assavr-scoreStatistic', JSON.stringify(scoreStatistic));
+  updateScoreTable(scoreList, scoreStatistic);
+}
 
 function startGame() {
   hp = 3;
@@ -52,10 +82,9 @@ function startGame() {
   }
   fallingObjects.innerHTML = '';
   catcher.style.left = catcherCenter + 'px';
-  dialogHello.classList.remove('open');
-  dialogGameOver.classList.remove('open');
-  setTimeout(() => dialogHello.close(), 500);
-  setTimeout(() => dialogGameOver.close(), 500);
+  closeDialog(dialogHello);
+  closeDialog(dialogGameOver);
+  closeDialog(dialogRules);
   startGameLoop();
   playAudio('background audio');
   document.addEventListener('keydown', control);
@@ -63,16 +92,13 @@ function startGame() {
 
 function endGame() {
   scorePointFinally.innerText = `${score}`;
-  console.log(`${Date.now()}endGame`)
+  console.log(`${Date.now()}endGame`);
   addResultToScore(score);
   controlAudio('game over');
   dialogGameOver.show();
   dialogGameOver.classList.add('open');
   document.removeEventListener('keydown', control);
 }
-
-
-
 
 function moveCatcherLeft() {
   if (catcherLeft > 0) {
@@ -124,13 +150,13 @@ function startGameLoop() {
       leaf: {
         velocity: 5,
         catcherOffsetLeft: 40,
-        catcherOffsetRight: 40,
+        catcherOffsetRight: 80,
         catchSound: 'catch leaf',
       },
       drop: {
         velocity: 10,
         catcherOffsetLeft: 40,
-        catcherOffsetRight: 40,
+        catcherOffsetRight: 80,
         catchSound: 'catch drop',
       },
     };
@@ -184,9 +210,7 @@ function startGameLoop() {
     if (hp === 0) {
       endGame();
     }
-
   }
-
 
   const generateLeafId = setInterval(() => {
     generatedObjects.push(generateObject('leaf'));
@@ -198,6 +222,7 @@ function startGameLoop() {
 }
 
 buttonPlay.addEventListener('click', startGame);
+buttonPlayAlso.addEventListener('click', startGame);
 
 document.onkeydown = function startPlay(event) {
   if (event.code === 'Space') {
@@ -205,60 +230,29 @@ document.onkeydown = function startPlay(event) {
   }
 };
 
-
-// SCORE STATISTIC START
-function sortArray(array) {
-  return array.sort(function(a,b) {
-    return b - a;
-  })
-}
-
-function updateScoreTable(arrayHtml, arrayStore) {
-  for (let i = 0; i < arrayStore.length; i++) {
-    arrayHtml[i].innerText = `${arrayStore[i]}`
-  }
-}
-
-function addResultToScore(result) {
-  console.log('assavr', result);
-  scoreStatistic.push(result)
-  sortArray(scoreStatistic);
-  scoreStatistic = scoreStatistic.slice(0, 10);
-  localStorage.setItem('assavr-scoreStatistic', JSON.stringify(scoreStatistic));
-  updateScoreTable(scoreList, scoreStatistic);
-}
-
-
-
-
-// localStorage.setItem('assavr-scoreStatistic', JSON.stringify(scoreStatistic));
-// const statParseFromStorage = JSON.parse(localStorage.getItem('assavr-scoreStatistic'));
-
-// sortArray(scoreStatistic);
-// showScore(scoreList, scoreStatistic);
-
-// SCORE STATISTIC END
-
 buttonVolume.addEventListener('click', () => controlAudio('background audio'));
 
 btnRestart.addEventListener('click', startGame);
 
 openScoreList.forEach((elem) => {
   elem.addEventListener('click', () => {
-    dialogScore.show();
-    dialogScore.classList.add('open');
-    dialogGameOver.classList.remove('open')
-    dialogGameOver.close();
-    dialogHello.close()
-    dialogHello.classList.remove('open')
-  })
-})
+    closeDialog(dialogGameOver);
+    closeDialog(dialogHello);
+    openDialog(dialogScore);
+  });
+});
 
 buttonCloseScore.addEventListener('click', () => {
-  dialogScore.classList.remove('open');
-  dialogScore.close();
-  dialogHello.classList.add('open');
-  dialogHello.show();
+  closeDialog(dialogScore);
+  openDialog(dialogHello);
+});
+
+buttonOpenRules.addEventListener('click', () => {
+  closeDialog(dialogHello);
+  openDialog(dialogRules);
+});
+
+buttonGoBack.addEventListener('click', () => {
+  closeDialog(dialogRules);
+  openDialog(dialogHello);
 })
-
-
