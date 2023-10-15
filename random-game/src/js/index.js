@@ -101,14 +101,17 @@ function endGame() {
 }
 
 function moveCatcherLeft() {
-  if (catcherLeft > 0) {
+  if (catcherLeft > 0 /* left edge game field */) {
     catcherLeft -= 20;
     catcher.style.left = catcherLeft + 'px';
   }
 }
 
 function moveCatcherRight() {
-  if (catcherLeft < 670) {
+  const widthCatcher = 80;
+  const widthBorder = 40;
+  const widthGame = 800;
+  if (catcherLeft < (widthGame - widthCatcher - widthBorder)) {
     catcherLeft += 20;
     catcher.style.left = catcherLeft + 'px';
   }
@@ -116,11 +119,9 @@ function moveCatcherRight() {
 
 function control(event) {
   if (event.key === 'ArrowLeft' || event.code === 'KeyA') {
-    // moveCatcherLeft(catcher, catcherLeft);
     moveCatcherLeft();
   }
   if (event.key === 'ArrowRight' || event.code === 'KeyD') {
-    // moveCatcherRight(catcher, catcherLeft);
     moveCatcherRight();
   }
 }
@@ -144,19 +145,19 @@ function generateObject(objType /* leaf or drop */) {
 
 function startGameLoop() {
   const generatedObjects = [generateObject('leaf'), generateObject('drop')];
-
+  const catcherWidthHeight = 80;
   function fallDownObjects() {
     const objParams = {
       leaf: {
         velocity: 5,
-        catcherOffsetLeft: 40,
-        catcherOffsetRight: 80,
+        catcherOffsetLeft: 40,  /* catcher width / 2 ;) */
+        catcherOffsetRight: catcherWidthHeight,
         catchSound: 'catch leaf',
       },
       drop: {
         velocity: 10,
-        catcherOffsetLeft: 40,
-        catcherOffsetRight: 80,
+        catcherOffsetLeft: 40,  /* catcher width / 2 ;) */
+        catcherOffsetRight: catcherWidthHeight,
         catchSound: 'catch drop',
       },
     };
@@ -167,7 +168,7 @@ function startGameLoop() {
       }
 
       if (
-        obj.y < catcherBottom + 80 &&
+        obj.y < catcherBottom + catcherWidthHeight &&
         obj.y > catcherBottom &&
         obj.x > catcherLeft - objParams[obj.objType].catcherOffsetLeft &&
         obj.x < catcherLeft + objParams[obj.objType].catcherOffsetRight

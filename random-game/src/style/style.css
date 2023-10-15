@@ -277,7 +277,7 @@ dialog {
 .game-button:hover {
   background-color: rgba(207 107 68 / 50%);
   transform: scale(1.1);
-  transition-duration: 0.25;
+  transition-duration: 0.5s;
 }
 
 .dialog-score {

@@ -1,0 +1,87 @@
+@media (height <= 931px) {
+  .modal {
+    padding: 130px 100px;
+  }
+}
+
+@media (height <= 910px) {
+  .modal {
+    padding: 120px 100px;
+  }
+}
+
+@media (height <= 880px) {
+  .modal {
+    padding: 104px 100px;
+  }
+}
+
+@media (height <= 840px) {
+  .modal {
+    padding: 90px 100px;
+  }
+}
+
+@media (height <= 810px) {
+  .modal {
+    padding: 75px 100px;
+  }
+}
+
+@media (height <= 790px) {
+  .modal {
+    padding: 60px 100px;
+  }
+}
+
+@media (height <= 750px) {
+  .modal {
+    padding: 40px 100px;
+  }
+}
+
+@media (height <= 715px) {
+  .modal {
+    padding: 22px 100px;
+  }
+}
+
+@media (height <= 670px) {
+  .canvas {
+    width: 700px;
+  }
+
+  .modal-hello__content,
+  .modal-game-over__content,
+  .dialog-score-content,
+  .dialog-rules-content {
+    padding: 20px 60px;
+  }
+
+  .dialog-rules-content .button__play-game {
+    margin: 0;
+  }
+
+  .dialog-rules-list {
+    font-size: 15px;
+  }
+}
+
+@media (height <= 645px) {
+  .modal-hello__game-description {
+    line-height: 25px;
+  }
+  .modal-hello__content {
+    padding: 20px 60px;
+  }
+  .game-button {
+    font-size: 25px;
+  }
+}
+
+@media (height <= 605px) {
+
+  .modal-hello__content {
+    padding: 14px 40px;
+  }
+}

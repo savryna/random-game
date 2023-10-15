@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style/normalize.css" />
     <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/small-screen.css">
     <link rel="icon" href="./src/img/leaf.svg" type="image/svg+xml" />
     <title>Happy Fall</title>
   </head>
@@ -55,9 +56,9 @@
       <div class="tree">
         <img src="./src/img/firs.svg" alt="tree pic" />
       </div>
-      <dialog class="modal-hello open" open>
+      <dialog class="modal-hello modal open" open>
         <div class="modal-hello__content">
-          <h2>
+          <h2 class="title-modal">
             H<span
               ><img
                 class="title-pumpkin"
@@ -90,9 +91,9 @@
           </button>
         </div>
       </dialog>
-      <dialog class="modal-game-over">
+      <dialog class="modal-game-over modal">
         <div class="modal-game-over__content">
-          <h2>
+          <h2 class="title-modal">
             G<span
               ><img
                 class="title-pumpkin"
@@ -113,7 +114,7 @@
           </button>
         </div>
       </dialog>
-      <dialog class="dialog-score">
+      <dialog class="dialog-score modal">
         <div class="dialog-score-content">
           <div class="score-header">
             <h2 class="title-statistics-score">Score Statistics</h2>
@@ -136,13 +137,14 @@
           </ol>
         </div>
       </dialog>
-      <dialog class="dialog-rules">
+      <dialog class="dialog-rules modal">
         <div class="dialog-rules-content">
           <div class="dialog-rules-top">
             <button class="btn-arrow-back">
               <img src="./src/img/arrow.png" alt="arrow" class="arrow-back-img"/>
             </button>
-            <h2>
+            <h2 class="title-modal"
+            >
               H<span
                 ><img
                   class="title-pumpkin"
